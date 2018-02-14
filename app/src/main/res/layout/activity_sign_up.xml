@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.hssus.khel.hsskhel.activity.SignUp">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/txtFirstName"
+            android:inputType="text"
+            android:minLines="3"
+            android:hint="First Name"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <EditText
+            android:id="@+id/txtLastName"
+            android:inputType="text"
+            android:minLines="3"
+            android:hint="Last Name"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/txtShakhaName"
+            android:inputType="text"
+            android:minLines="3"
+            android:hint="Shakha Name"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/txtAddress"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:hint="Address"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/txtCity"
+            android:inputType="text"
+            android:minLines="3"
+            android:hint="City"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/txtState"
+            android:inputType="text"
+            android:minLines="3"
+            android:hint="State"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/txtZip"
+            android:inputType="text"
+            android:minLines="3"
+            android:hint="Zip"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <EditText
+            android:id="@+id/txtCountry"
+            android:inputType="text"
+            android:minLines="3"
+            android:hint="Country"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:inputType="textEmailAddress"
+            android:minLines="3"
+            android:hint="Email Address"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/txtPhone"
+            android:inputType="text"
+            android:minLines="3"
+            android:hint="Phone number"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/txtPassword"
+            android:inputType="textPassword"
+            android:minLines="3"
+            android:hint="Password"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:text="Register"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

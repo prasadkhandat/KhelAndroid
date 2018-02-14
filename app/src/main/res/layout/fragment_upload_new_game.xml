@@ -1,0 +1,268 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.hssus.khel.hsskhel.Fragments.UploadNewGame">
+
+
+
+    <!-- TODO: Update blank fragment layout Login-->
+<LinearLayout
+    android:visibility="gone"
+    android:id="@+id/login_layout"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+
+    <EditText
+        android:text="prasad.khandat@gmail.com"
+    android:id="@+id/txtUsername"
+    android:hint="User name"
+    android:paddingBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:text="123456"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Button
+android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Login"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Register"/>
+</LinearLayout>
+
+    <!-- TODO: Update blank fragment layout Upload-->
+
+<LinearLayout
+    android:visibility="visible"
+        android:id="@+id/upload_layout"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/txtKhelName"
+        android:hint="Khel Name"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:id="@+id/txtKhelDescription"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:hint="Khel Description"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:text="Formation"
+        android:paddingBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/formationGroup"
+        android:paddingBottom="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/tati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tati"            />
+        <RadioButton
+            android:id="@+id/mandal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mandal"/>
+        <RadioButton
+            android:id="@+id/onecourt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" One Court"            />
+        <RadioButton
+            android:id="@+id/multicourt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Multi Court"            />
+    </RadioGroup>
+
+    <TextView
+        android:text="Intensity"
+        android:paddingBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/intensityGroup"
+        android:paddingBottom="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/extreme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extreme"            />
+        <RadioButton
+            android:id="@+id/heigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High"/>
+        <RadioButton
+            android:id="@+id/medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"            />
+        <RadioButton
+            android:id="@+id/low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="low"            />
+    </RadioGroup>
+
+    <TextView
+        android:text="Audiance"
+        android:paddingBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/audianceGroup"
+        android:paddingBottom="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/sevak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Swayamsevak"            />
+        <RadioButton
+            android:id="@+id/sevika"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sevika"/>
+        <RadioButton
+            android:id="@+id/both"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Both"            />
+    </RadioGroup>
+
+    <TextView
+        android:text="Minimum Participants"
+        android:paddingBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/minimumParticipantsGroup"
+        android:paddingBottom="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/m1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1-5"            />
+        <RadioButton
+            android:id="@+id/m2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6-10"/>
+        <RadioButton
+            android:id="@+id/m3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11-15"            />
+        <RadioButton
+            android:id="@+id/m4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15-20"            />
+        <RadioButton
+            android:id="@+id/m5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=">20"            />
+    </RadioGroup>
+
+    <TextView
+        android:text="Maximum Participants"
+        android:paddingBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/maximumParticipantsGroup"
+        android:paddingBottom="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/mx1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1-5"            />
+        <RadioButton
+            android:id="@+id/mx2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6-10"/>
+        <RadioButton
+            android:id="@+id/mx3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11-15"            />
+        <RadioButton
+            android:id="@+id/mx4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15-20"            />
+        <RadioButton
+            android:id="@+id/mx5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=">20"            />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/youtubeLink"
+        android:hint="Youtube Video Link"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Upload"/>
+
+</LinearLayout>
+
+
+</FrameLayout>
+</ScrollView>

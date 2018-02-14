@@ -1,0 +1,261 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.hssus.khel.hsskhel.Fragments.GameListFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/gameList"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtFilter"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Filter"/>
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/khellists"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+
+        <TextView
+            android:text="Formation"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/formationGroup"
+            android:paddingBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/tatiAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"            />
+            <RadioButton
+                android:id="@+id/tati"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tati"            />
+            <RadioButton
+                android:id="@+id/mandal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mandal"/>
+            <RadioButton
+                android:id="@+id/onecourt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" One Court"            />
+            <RadioButton
+                android:id="@+id/multicourt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Multi Court"            />
+        </RadioGroup>
+
+        <TextView
+            android:text="Intensity"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/intensityGroup"
+            android:paddingBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/extremeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"            />
+            <RadioButton
+
+                android:id="@+id/extreme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Extreme"            />
+            <RadioButton
+                android:id="@+id/heigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High"/>
+            <RadioButton
+                android:id="@+id/medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium"            />
+            <RadioButton
+                android:id="@+id/low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="low"            />
+        </RadioGroup>
+
+        <TextView
+            android:text="Audiance"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/audianceGroup"
+            android:paddingBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/sAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"            />
+            <RadioButton
+
+                android:id="@+id/sevak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Swayamsevak"            />
+            <RadioButton
+                android:id="@+id/sevika"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sevika"/>
+            <RadioButton
+                android:id="@+id/both"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Both"            />
+        </RadioGroup>
+
+        <TextView
+            android:text="Minimum Participants"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/minimumParticipantsGroup"
+            android:paddingBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/miAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"            />
+            <RadioButton
+                android:id="@+id/m1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-5"            />
+            <RadioButton
+                android:id="@+id/m2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6-10"/>
+            <RadioButton
+                android:id="@+id/m3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11-15"            />
+            <RadioButton
+                android:id="@+id/m4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15-20"            />
+            <RadioButton
+                android:id="@+id/m5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">20"            />
+        </RadioGroup>
+
+        <TextView
+            android:text="Maximum Participants"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/maximumParticipantsGroup"
+            android:paddingBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/mxAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"            />
+            <RadioButton
+
+                android:id="@+id/mx1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-5"            />
+            <RadioButton
+                android:id="@+id/mx2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6-10"/>
+            <RadioButton
+                android:id="@+id/mx3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11-15"            />
+            <RadioButton
+                android:id="@+id/mx4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15-20"            />
+            <RadioButton
+                android:id="@+id/mx5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">20"            />
+        </RadioGroup>
+
+<Button
+    android:id="@+id/btnAppyFilter"
+    android:text="Apply Filter"
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp" />
+    </LinearLayout>
+</FrameLayout>
+</ScrollView>
