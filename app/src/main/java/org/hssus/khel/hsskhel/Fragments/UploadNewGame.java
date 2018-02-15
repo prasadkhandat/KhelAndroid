@@ -53,6 +53,7 @@ public class UploadNewGame extends Fragment {
                 case Constant.actions.KHEL_UPLOAD:
                     if (!intent.getBooleanExtra(Constant.extra.ERROR, false)) {
                         Toast.makeText(getContext(), "Game Uploaded successfully...", Toast.LENGTH_SHORT).show();
+                        cleanupUpload();
                     }else{
                         Toast.makeText(getContext(), "Error Uploading game", Toast.LENGTH_SHORT).show();
                     }
@@ -200,21 +201,42 @@ public class UploadNewGame extends Fragment {
         radioButtonID = maximumParticipantsGroup.getCheckedRadioButtonId();
         RadioButton maxBtn = maximumParticipantsGroup.findViewById(radioButtonID);
 
+        Boolean flag =true;
+        if(txtKhelName.getText().toString().length()==0) {
+            Toast.makeText(getContext(), "Please enter game name", Toast.LENGTH_LONG).show();
+            flag=false;
+        }
+        else if(txtKhelDescription.getText().toString().length()==0){
+            Toast.makeText(getContext(),"Please enter game description",Toast.LENGTH_LONG).show();
+            flag=false;
+        }
+        else if(youtubeLink.getText().toString().length()==0){
+            Toast.makeText(getContext(),"Please enter video link from youtube",Toast.LENGTH_LONG).show();
+            flag=false;
+        }
 
-        KhelModel model = new KhelModel();
-        model.setName(txtKhelName.getText().toString());
-        model.setDescription(txtKhelDescription.getText().toString());
-        model.setFormation(formationButton.getText().toString());
-        model.setIntensity(intensityRadio.getText().toString());
-        model.setAudiance(audianceButton.getText().toString());
-        model.setMinParticipants(minBtn.getText().toString());
-        model.setMaxParticipants(maxBtn.getText().toString());
-        model.setVideo(youtubeLink.getText().toString());
+        if(flag) {
+            KhelModel model = new KhelModel();
+            model.setName(txtKhelName.getText().toString());
+            model.setDescription(txtKhelDescription.getText().toString());
+            model.setFormation(formationButton.getText().toString());
+            model.setIntensity(intensityRadio.getText().toString());
+            model.setAudiance(audianceButton.getText().toString());
+            model.setMinParticipants(minBtn.getText().toString());
+            model.setMaxParticipants(maxBtn.getText().toString());
+            model.setVideo(youtubeLink.getText().toString());
 
-        AuthModel modelAuth = AuthModel.fromJson(SharedPreferenceManager.getInstance().getString(Constant.AUTH_DATA,""));
 
-        UploadNewGameService.startUploadNewGameService(getContext(),model.toJson().toString(),modelAuth.getAccessToken());
+            AuthModel modelAuth = AuthModel.fromJson(SharedPreferenceManager.getInstance().getString(Constant.AUTH_DATA, ""));
 
+            UploadNewGameService.startUploadNewGameService(getContext(), model.toJson().toString(), modelAuth.getAccessToken());
+        }
+    }
+
+    private void cleanupUpload(){
+        txtKhelDescription.setText("");
+        txtKhelName.setText("");
+        youtubeLink.setText("");
     }
 
     private void initBroadcastReceiver() {
